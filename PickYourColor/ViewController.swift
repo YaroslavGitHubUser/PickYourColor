@@ -27,27 +27,21 @@ class ViewController: UIViewController {
         redIntensityLabel.text = String(redSlider.value)
         greenIntensityLabel.text = String(greenSlider.value)
         blueIntensityLabel.text = String(blueSlider.value)
+        colorView.layer.cornerRadius = 10
+        
+        showColor()
+    }
+
+    
+    @IBAction func sliderAction() {
+        redIntensityLabel.text = String((redSlider.value * 100).rounded() / 100)
+        greenIntensityLabel.text = String((greenSlider.value * 100).rounded() / 100)
+        blueIntensityLabel.text = String((blueSlider.value * 100).rounded() / 100)
         
         showColor()
     }
 
 
-    @IBAction func redSliderAction() {
-        redIntensityLabel.text = String((redSlider.value * 100).rounded() / 100)
-        showColor()
-    }
-    
-    @IBAction func greenSliderAction() {
-        greenIntensityLabel.text = String((greenSlider.value * 100).rounded() / 100)
-        showColor()
-    }
-    
-    @IBAction func blueSliderAction() {
-        blueIntensityLabel.text = String((blueSlider.value * 100).rounded() / 100)
-        showColor()
-    }
-    
-    
     private func showColor() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
