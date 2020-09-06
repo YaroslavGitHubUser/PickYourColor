@@ -111,11 +111,22 @@ extension ViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
 
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.tag == 0 {
-            redIntensityLabel.text = textField.text
+        guard let newValue = Float(textField.text!) else {return}
+        switch textField.tag {
+        case 0: redSlider.value = newValue
+        case 1: greenSlider.value = newValue
+        case 2: blueSlider.value = newValue
+        default: break
         }
+        
+        showColor()
+        changeText()
     }
+        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+    }
+    
 }
 
