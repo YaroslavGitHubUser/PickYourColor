@@ -13,6 +13,7 @@
 		C4CEDF1124F25513001FB375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CEDF0F24F25513001FB375 /* Main.storyboard */; };
 		C4CEDF1324F25515001FB375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CEDF1224F25515001FB375 /* Assets.xcassets */; };
 		C4CEDF1624F25515001FB375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CEDF1424F25515001FB375 /* LaunchScreen.storyboard */; };
+		C4FBD96C2503A59E007B100F /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBD96B2503A59E007B100F /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C4CEDF1224F25515001FB375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CEDF1524F25515001FB375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4CEDF1724F25515001FB375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4FBD96B2503A59E007B100F /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C4CEDF0924F25513001FB375 /* AppDelegate.swift */,
 				C4CEDF0B24F25513001FB375 /* SceneDelegate.swift */,
+				C4FBD96B2503A59E007B100F /* InitialViewController.swift */,
 				C4CEDF0D24F25513001FB375 /* ViewController.swift */,
 				C4CEDF0F24F25513001FB375 /* Main.storyboard */,
 				C4CEDF1224F25515001FB375 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				C4CEDF0E24F25513001FB375 /* ViewController.swift in Sources */,
 				C4CEDF0A24F25513001FB375 /* AppDelegate.swift in Sources */,
 				C4CEDF0C24F25513001FB375 /* SceneDelegate.swift in Sources */,
+				C4FBD96C2503A59E007B100F /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PickYourColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PickYourColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
