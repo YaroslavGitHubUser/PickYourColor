@@ -61,16 +61,6 @@ class ViewController: UIViewController {
                                             alpha: 1)
     
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
 
 // MARK: - IBActions
 
@@ -84,6 +74,8 @@ class ViewController: UIViewController {
         delegate.setColor(red: CGFloat(redSlider.value),
                           green: CGFloat(greenSlider.value),
                           blue: CGFloat(blueSlider.value))
+        
+        dismiss(animated: true)
     }
 
 // MARK: - Private Functions
@@ -125,7 +117,7 @@ extension ViewController: UITextFieldDelegate {
     }
         
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
+        textField.resignFirstResponder()
     }
     
 }

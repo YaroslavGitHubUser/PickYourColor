@@ -14,23 +14,18 @@ protocol ViewControllerDelegate {
 
 class InitialViewController: UIViewController {
 
-    @IBOutlet var mainView: UIView!
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let rgbaChosen = mainView.backgroundColor?.rgba
+        let rgbaChosen = view.backgroundColor?.rgba
         let colorVC = segue.destination as! ViewController
         colorVC.colorViewPassed = rgbaChosen
         
         colorVC.delegate = self
     }
-    
-    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-    }
 }
 
 extension InitialViewController: ViewControllerDelegate {
     func setColor(red: CGFloat, green: CGFloat, blue: CGFloat) {
-        mainView.backgroundColor = UIColor(red: red,
+        view.backgroundColor = UIColor(red: red,
                                            green: green,
                                            blue: blue,
                                            alpha: 1)

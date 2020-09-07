@@ -20,13 +20,10 @@
                     <navigationItem key="navigationItem" id="Ygj-s7-zJZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="GV1-RH-S1D">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="BWA-g6-9e1"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="BWA-g6-9e1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="mainView" destination="o2h-aU-cTE" id="5uZ-JP-GMn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vy-Pi-U1m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,14 +38,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMZ-F5-JUg" userLabel="ColorView">
-                                <rect key="frame" x="16" y="74" width="288" height="120"/>
+                                <rect key="frame" x="16" y="30" width="288" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="rt1-MC-f3f"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="r06-4I-NVj" userLabel="NamesStack">
-                                <rect key="frame" x="16" y="224" width="50" height="130"/>
+                                <rect key="frame" x="16" y="180" width="50" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buw-32-9ht" userLabel="RedLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
@@ -75,7 +72,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="V2G-w7-6Wm" userLabel="IntensityStack">
-                                <rect key="frame" x="76" y="224" width="40" height="131"/>
+                                <rect key="frame" x="76" y="180" width="40" height="131"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65s-uC-1fR" userLabel="RedIntensityLabel">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="20.5"/>
@@ -101,7 +98,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iP9-x2-bxD" userLabel="SliderStack">
-                                <rect key="frame" x="134" y="219" width="97" height="140"/>
+                                <rect key="frame" x="134" y="175" width="97" height="140"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.53000000000000003" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="I5H-PX-maS" userLabel="RedSlider">
                                         <rect key="frame" x="-2" y="0.0" width="101" height="31"/>
@@ -140,11 +137,10 @@
                                 </state>
                                 <connections>
                                     <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="8m2-UH-2KV"/>
-                                    <segue destination="USd-c7-r6c" kind="unwind" unwindAction="unwindSegueWithSegue:" id="V94-GC-VSg"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="QOb-Cb-MOi" userLabel="TextFieldStack">
-                                <rect key="frame" x="249" y="219" width="55" height="146"/>
+                                <rect key="frame" x="249" y="175" width="55" height="146"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNl-MR-bed" userLabel="RedTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
@@ -203,7 +199,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="USd-c7-r6c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1042.5" y="110.91549295774648"/>
         </scene>
